@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --a:0;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: black;
+    color: white;
+}
+
+.left{
+    width : 25vw; 
+    padding: 2px;
+    background-color: #000000;
+}
+.right{
+    width : 75vw;
+    padding: 2px;
+    margin: 7px;
+    position: relative;
+}
+
+ 
+.container{
+    display :flex;
+    max-height: 100vh;
+}
+
+.home ul li{
+    display: flex;
+    width: 30px;
+    gap: 15px;
+    list-style: none;
+    padding-top: 28px;
+    font-weight: 600;
+    font-size: 18px;
+    align-items: center;
+}
+
+.heading {
+    display : flex;
+    gap: 10px;
+    list-style: none;
+    padding-top: 10px;
+    font-size: 9px;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 14px;
+    
+}
+
+.heading img{
+    width : 32px;
+}
+
+.footer{
+    display : flex;
+    font-size: 6px;
+    position: absolute;
+    bottom: 0;
+    gap: 6px;
+}
+.footer a{
+    color: grey;
+    width: 100%;
+    
+    
+}
+.library{
+    bottom: 0px;
+    position: relative;
+    height: 71vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #272727;
+    height: 74px;
+}
+.header > *{
+    padding: 18px ;
+}
+.popular-albums{
+    padding : 10px;
+    padding-top: 34px;
+    font-size: 17px;
+}
+.card{
+    width: 172px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #121212;
+    margin: 5px;
+    position: relative;
+    transition: all .25s;
+
+}
+.card:hover{
+    background-color: #252525;
+    cursor: pointer;
+    --a : 1
+}
+.card p{
+    font-size: 13px;
+}
+.card > *{
+padding-top: 4px;
+}
+.card img{
+    width: 100%;
+    object-fit : contain;
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 30px;
+    overflow-y: auto;
+    max-height: 60vh;
+    
+}
+.card > img{
+    border-radius: 10px;
+}
+.play-button{
+    position: absolute;
+    right: 14px;
+    top: 135px;
+}
+.signup-btn{
+    color: #b3b3b3;
+    font-weight: bold;
+    background-color: #272727;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.signup-btn:hover{
+    font-size: 17px;
+    color: white;
+}
+.login-btn{
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer; 
+    padding: 8px 32px;
+    border-radius: 25px;
+    margin-left: 18px;
+    font-weight: bold;
+}
+.login-btn:hover{
+    font-size: 17px;
+    
+}
+.buttons > *{
+    margin: 0px 14px;
+}
+.playbar{
+    position: fixed;
+    filter: invert(1);
+    bottom: 22px;
+    width: 70vw;
+    background-color: rgb(182, 182, 182);
+    box-sizing: border-box;
+    padding: 10px;
+
+    border-radius: 30px;
+    min-height: 60px;
+}
+.play-button{
+    opacity: var(--a);
+}
+.songs-list{
+    padding: 10px 20px;
+    height: 58vh;
+    overflow-y: scroll;
+}
+.songs-list ul li{
+    list-style-type: decimal;
+    display: flex;
+    gap: 10px;
+    padding: 12px 0px;
+    cursor: pointer;
+    border: 1px solid white;
+    margin: 10px 0px;
+    padding: 12px;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+    
+.hamburger{
+    display: none;
+}
+.hamburgerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+.info{
+    font-size: 12px;
+    width: 184px;
+}
+.info div{
+    word-break: break-all;
+}
+.play-now span{
+font-size: 12px;
+}
+.play-now {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+}
+.seekbar{
+    height: 4px;
+    width: 96%;
+    border-radius: 10px;
+    background-color: black;
+    bottom: 0px;
+    position: absolute;
+    margin: 6px;
+    cursor: pointer;
+}
+.circle{
+    height: 13px;
+    width: 13px;
+    border-radius: 13px;
+    background-color: black;
+    position: relative;
+    bottom: 6px;
+    left: 0%;
+    transition: left 0.5s;
+}
+.song-btns{
+    cursor: pointer;
+}
+.song-time{
+    text-align: end;
+    width: 145px;
+}
+
+.song-info, .song-time{
+    color: black;
+    padding: 0px 12px; 
+}
+.song-info{
+    width: 300px;
+}
+.timevol{
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    
+}
+.volume{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.range input{
+    cursor: pointer;
+}
+.abovebar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.close{
+    display: none;
+}
+@media  (max-width : 1200px){
+    .left{
+        position: absolute;
+        left: -120%;
+        transition: all 0.3s;
+        z-index: 1;
+        width: 370px;
+        height: 100vh;
+    }
+    .left .close{
+        position: absolute;
+        right: 16px;
+        top: 21px;
+        display: block;
+    }
+    .right{
+        width : 100vw;
+        height: 100vh;
+        margin: 0;
+    }
+    .playbar{
+        width: calc(100vw - 30px);
+    }
+    .seekbar{
+        width: calc(100vw - 67px);
+    }
+    .hamburger{
+        display: block;
+    }
+    .abovebar {
+        padding: 15px 0px;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+    }
+    .header > * {
+        padding: 0px;
+        display: flex;
+        align-items: center;
+    }
+    .card{
+        width: 42vw;
+    }
+    .card-container{
+        margin: 0px;
+        justify-content: center;
+        max-height: 74vh;
+    }
+    .popular-albums{
+        padding-top: 9px;
+    
+    }
+    .song-info, .song-time{
+        text-align: center;
+        
+    }
+    .popular-albums h1 {
+        padding: 12px;
+    }
+    .timevol{
+        flex-direction: column;
+        gap: 12px;
+    }
+    .play-button{
+        display: none;
+    }
+}
+@media  (max-width : 550px){
+    .card{
+        width: 80vw;
+    }
+}
